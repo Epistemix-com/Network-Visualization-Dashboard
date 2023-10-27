@@ -12,7 +12,8 @@ graph TD;
 
 At simulation:
 - Add an instance of the `Record_Exposures` module with your transmissible condition and your exposed state to you FRED simulation.
-  - This adds a set_state() command to your transmissible condition's exposed state to write an exposure to a csv file
+  - This adds a set_state() command to your transmissible condition's exposed state to write an exposure to a csv file and adds a unique `RECORD_EXPOSURES` condition for your transmissible condition.
+  - Output of `RECORD_EXPOSURES` is `exposure_locs_$transmissible_condition$.csv`
 
 After simulation:
 - Use `epx-pop` package or `detail_agents.py` script to add human-readable details to csv file from Record_Exposures module
